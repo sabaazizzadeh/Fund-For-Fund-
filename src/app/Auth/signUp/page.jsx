@@ -3,13 +3,17 @@ import SignUpForm from "@/app/components/forms/signUpForm";
 import Image from "next/image";
 
 function SignUp() {
+
+
     return (
         <>
+            <h1 className="text-[#444444] text-center text-[28px] mt-8 font-medium">Create your personal account</h1>
+
             <div className="grid justify-center items-center gap-2.5">
                 <h1 className="text-center text-[#644FC1] text-5xl mt-20">Fund For Fund</h1>
                 <div>
                     <Image src="/Images/logo/logo.svg"
-                    className="mx-auto mt-5"
+                        className="mx-auto mt-5"
                         width={50}
                         height={50}
                         alt=""
@@ -27,9 +31,9 @@ function SignUp() {
             </div>
 
             <p className="text-[#959595] font-light absolute bottom-4 left-1/2 transform -translate-x-1/2 text-center">
-            This site is protected by reCAPTCHA and the Google  
-            <span className="text-[#644FC1]"> privacy</span> and
-            <span className="text-[#644FC1]"> Terms of service</span> apply
+                This site is protected by reCAPTCHA and the Google
+                <span className="text-[#644FC1]"> privacy</span> and
+                <span className="text-[#644FC1]"> Terms of service</span> apply
             </p>
         </>
     );
