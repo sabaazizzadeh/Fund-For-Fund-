@@ -1,13 +1,11 @@
-
-import SignUp from "./Auth/signUp/page";
-import Navbar from "./components/shared/navbar";
+import Backers from "./components/brandComponents/Backers/Backers";
 
 export default function Home() {
   return (
     <>
-     
-      <SignUp />
-      
+    <Backers />
+   
+    
     </>
   );
 }
