@@ -1,10 +1,10 @@
-import Backers from "./components/brandComponents/Backers/Backers";
+import Steps from "./components/shared/steps";
 
 export default function Home() {
   return (
     <>
-    <Backers />
-   
+ 
+   <Steps />
     
     </>
   );
