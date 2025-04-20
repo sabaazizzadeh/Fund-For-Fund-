@@ -4,8 +4,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Footer from "./components/shared/footer/footer";
 import Navbar from "./components/shared/navbar";
+import { AuthProvider } from "../context/AuthContext";
 
-// فقط فونت Inter رو وارد می‌کنیم
 const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
@@ -21,10 +21,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${inter.variable} antialiased`}>
-      <Navbar />
-        {children}
-       
-        <Footer />
+        <AuthProvider>
+
+          {children}
+
+        </AuthProvider>
       </body>
     </html>
   );

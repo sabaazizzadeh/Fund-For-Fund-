@@ -1,11 +1,12 @@
 import Image from "next/image";
 import StartBrand from "../buttons/startBrand";
 import LearnMoreBrand from "../buttons/learnMoreBrand";
+import Navbar from "../shared/navbar";
 
 function Brand() {
     return (
         <>
-
+            <Navbar />    
             <div className="text-center mt-24">
                 <h1 className="text-[#270F94] font-bold text-2xl">Create your profile and take the first step towards new opportunities</h1>
                 <p className="mx-56 font-light text-[#717171] text-[20px] mt-8">
