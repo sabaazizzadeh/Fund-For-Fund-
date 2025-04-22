@@ -1,13 +1,15 @@
 
-import Brand from './components/brandAndOrganization/brand';
-import TierTypes from './components/TIierTypes/tierTypes';
+
+import Question from './components/question/question';
+
 
 export default function Home() {
  
   return (
     <> 
-      {/* <Brand />    */}
-     <TierTypes/>
+     
+      <Question />
+      
     </>
   );
 }
