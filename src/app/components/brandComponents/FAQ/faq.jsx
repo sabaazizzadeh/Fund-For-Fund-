@@ -1,5 +1,5 @@
 import Image from "next/image";
-import FaqBox from "./faqBox";
+
 import AddQuestion from "../../buttons/addQuestion";
 
 function FAQ() {
@@ -18,10 +18,7 @@ function FAQ() {
                 </section>
 
             </div>
-            <div className="flex justify-center">
-                <FaqBox />
             
-            </div>
             <div className="flex justify-center items-center mt-16">
                 <AddQuestion />
             </div>
