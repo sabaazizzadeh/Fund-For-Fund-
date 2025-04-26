@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Info from "../components/DetailInfo/info";
 
-function DetailedInfo() {
+function Detailed() {
     return (
         <>
             <div className="flex flex-col justify-center items-center">
@@ -23,4 +23,4 @@ function DetailedInfo() {
     );
 }
 
-export default DetailedInfo;
+export default Detailed;

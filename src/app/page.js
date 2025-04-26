@@ -1,17 +1,13 @@
 
-
-import FAQ from './components/brandComponents/FAQ/faq';
-import Question from './components/question/question';
+import Brand from "./components/brandAndOrganization/brand";
 
 
 export default function Home() {
  
   return (
     <> 
-     
-      {/* <Question /> */}
-      <FAQ />
-      
+      <Brand /> 
+
     </>
   );
 }
