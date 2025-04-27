@@ -1,14 +1,11 @@
-import AddSocial from "../components/buttons/addSocial";
-import DetailedInput from "../components/inputs/detailed";
+import ParentComponent from "../components/detailedBrand/Parent";
 
-function Detailed() {
+function DetailedPage() {
     return ( 
         <>
-        
-        <DetailedInput /> 
-        <AddSocial />
+        <ParentComponent />
         </>
      );
 }
 
-export default Detailed;
+export default DetailedPage;

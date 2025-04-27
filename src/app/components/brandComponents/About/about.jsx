@@ -7,7 +7,7 @@ function About() {
     return ( 
 
         <>
-           <div className="grid justify-center items-center">
+           <div  className="grid justify-center items-center">
            <div className="flex items-center mb-16">
                 <Image 
                 src="Images/rec.svg"

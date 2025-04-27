@@ -4,11 +4,14 @@ import SearchBar from "../search/searchBar";
 import SignInButton from "../buttons/signInButton";
 import Image from "next/image";
 import { useAuth } from "@/context/AuthContext";
-function Navbar() {
+
+function Navbar({ showSearchAndSignIn = true }) {  // اضافه کردن پراپ
     const { user, login, logout } = useAuth()
+
     if (user === undefined) {
         return <div>Loading ...</div>
     }
+
     const links = [
         {
             text: "Home",
@@ -28,43 +31,38 @@ function Navbar() {
         },
     ]
 
-
     return (
-        <>
-            <div className="bg-white h-20 flex justify-around items-center shadow">
+        <div className="bg-white h-20 flex justify-around items-center shadow">
+            <div className="">
+                <Image src="/Images/logo/logo.svg"
+                    width={27.84}
+                    height={48}
+                    alt="Fund For Fund"
+                />
+            </div>
+            <nav className="ml-20">
+                <ul className="flex gap-8 font-light">
+                    {
+                        links.map((link) => (
+                            <li key={link.text}>
+                                <Link href={link.href}>{link.text}</Link>
+                            </li>
+                        ))
+                    }
+                </ul>
+            </nav>
 
-                <div className="">
-                    <Image src="/Images/logo/logo.svg"
-                        width={27.84}
-                        height={48}
-                        alt="Fund For Fund"
-                    />
-                </div>
-                <nav className="ml-20">
-                    <ul className="flex gap-8 font-light">
-                        {
-                            links.map((link) => (
-                                <li key={link.text}>
-                                    <Link href={link.href}>{link.text}</Link>
-                                </li>
-                            ))
-                        }
-                    </ul>
-                </nav>
-                <div className="flex">
-                    <SearchBar />
-                    <div>
-                        {
-                            user ? <Image src="Images/profileLogin.svg" width={42} height={42} alt="profile"
-                                className="ml-3"
-                            /> : <SignInButton />
-                        }
-
-                    </div>
-
+            <div className="flex">
+                {showSearchAndSignIn && <SearchBar />} 
+                <div>
+                    {
+                        user ? <Image src="Images/profileLogin.svg" width={42} height={42} alt="profile"
+                            className="ml-3"
+                        /> : (showSearchAndSignIn && <SignInButton />) 
+                    }
                 </div>
             </div>
-        </>
+        </div>
     );
 }
 

@@ -5,7 +5,7 @@ function Backers() {
     return (
 
         <>
-            <div className="grid justify-self-start pl-[449px] mb-11">
+            <div  className="grid justify-self-start pl-[449px] mb-11">
                 <section className="flex mb-6">
                     <Image
                         src="/Images/rec.svg"

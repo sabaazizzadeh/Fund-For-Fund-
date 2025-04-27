@@ -1,9 +1,11 @@
 import Image from "next/image";
 import GoToMyProfile from "../components/buttons/goToMyProfile";
+import Navbar from "../components/shared/navbar";
 
 function Congratulation() {
     return (
         <>
+        <Navbar showSearchAndSignIn={true} />
             <div className="flex flex-col justify-center items-center h-screen">
                 <div className="flex flex-col justify-center items-center ">
                     <h1 className="text-[#644FC1] text-3xl mb-16">Congratulation!</h1>
