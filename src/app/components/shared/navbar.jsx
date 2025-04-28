@@ -4,9 +4,11 @@ import SearchBar from "../search/searchBar";
 import SignInButton from "../buttons/signInButton";
 import Image from "next/image";
 import { useAuth } from "@/context/AuthContext";
+import UserProfile from "./userProfile";
+import UserMenu from "../userMenu/userMenu";
 
-function Navbar({ showSearchAndSignIn = true }) {  // اضافه کردن پراپ
-    const { user, login, logout } = useAuth()
+function Navbar({ showSearchAndSignIn = true }) {  
+    const { user  , login, logout } = useAuth()
 
     if (user === undefined) {
         return <div>Loading ...</div>
@@ -56,9 +58,9 @@ function Navbar({ showSearchAndSignIn = true }) {  // اضافه کردن پرا
                 {showSearchAndSignIn && <SearchBar />} 
                 <div>
                     {
-                        user ? <Image src="Images/profileLogin.svg" width={42} height={42} alt="profile"
-                            className="ml-3"
-                        /> : (showSearchAndSignIn && <SignInButton />) 
+                        user ? (showSearchAndSignIn && <SignInButton />)
+                            
+                       :  <UserMenu/>
                     }
                 </div>
             </div>
